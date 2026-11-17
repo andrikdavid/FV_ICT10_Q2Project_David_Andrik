@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'HarryPotter';
+    src: url(../Resources/HPFont.TTF);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-image: url('../Resources/BG1.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* --- Transparent Minimalist Navbar Styles --- */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px 20px 25px;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-brand img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 3px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.nav-links a:hover {
+    color: #e0b422;
+    text-shadow: 0 0 10px rgba(244, 160, 43, 0.6);
+}
+
+.nav-links a.active {
+    color: #e0b422;
+    border-bottom: 1px solid #e0b422;
+    text-shadow: 0 0 10px rgba(244, 160, 43, 0.6);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+form {
+    width: 350px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.55);
+    -webkit-box-shadow: 1px 1px 3px 3px rgba(255, 174, 61, 0.112);
+    box-shadow: 1px 1px 3px 3px rgba(244, 160, 43, 0.152);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    transition: transform 0.4s ease;
+}
+
+form:hover {
+    transform: translateY(-4px);
+}
+
+.header {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.header h1 {
+    font-family: 'HarryPotter';
+    margin: 4px 0;
+}
+
+.header img {
+    width: 70px;
+}
+
+.header p {
+    font-size: 15px;
+    line-height: 18px;
+    padding: 0 25px;
+    margin: 4px 0;
+}
+
+.inputs {
+    padding: 10px 25px;
+}
+
+input[type="text"] {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1.3px solid rgb(165, 165, 165);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.41);
+    outline: none;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.618);
+}
+
+.footer {
+    text-align: center;
+    padding: 0 25px;
+}
+
+.footer button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background: linear-gradient(#e0b422, #c98114);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.484);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.result-box {
+    width: 350px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.65);
+    box-shadow: 1px 1px 3px 3px rgba(244, 160, 43, 0.154);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    transition: transform 0.4s ease;
+}
+
+.result-box:hover {
+    transform: translateY(-2px);
+}
+
+footer {
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.677);
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    letter-spacing: 1px;
+}
+
+/* --- Creator Page Styles (Horizontal Side-by-Side Cards) --- */
+
+.creator-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap; 
+    max-width: 800px;
+}
+
+.creator-card {
+    width: 385px;
+    height: 545px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.55);
+    -webkit-box-shadow: 1px 1px 3px 3px rgba(255, 174, 61, 0.112);
+    box-shadow: 1px 1px 3px 3px rgba(244, 160, 43, 0.152);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    transition: transform 0.4s ease;
+}
+
+.creator-card:hover {
+    transform: translateY(-4px);
+}
+
+.creator-card h2 {
+    font-family: 'HarryPotter';
+    font-size: 32px;
+    text-align: center;
+    margin: 5px 0 15px 0;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.creator-card p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 2px 0; 
+}
+
+.creator-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.creator-card li {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+/* --- Profile Header Layout (Text Left, Image Right) --- */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.profile-info {
+    text-align: left;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #d4af375a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.03);
+}
+
+/* --- Social Buttons --- */
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(#e0b422, #c98114);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.484);
+    transition: opacity 0.3s ease;
+}
+
+.social-btn:hover {
+    opacity: 0.9;
+}

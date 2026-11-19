@@ -199,13 +199,14 @@ footer {
     flex-direction: row;
     gap: 30px;
     justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    align-items: stretch;
+    flex-wrap: wrap; 
     max-width: 800px;
 }
 
 .creator-card {
     width: 385px;
+    height: 545px;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.55);
     -webkit-box-shadow: 1px 1px 3px 3px rgba(255, 174, 61, 0.112);
@@ -221,28 +222,6 @@ footer {
     transform: translateY(-4px);
 }
 
-/* Slightly more compact height on the second card */
-.creator-card:nth-child(2) {
-    padding: 18px 25px;
-    max-height: 360px;
-    overflow-y: auto;
-}
-
-.creator-card:nth-child(2) h2 {
-    margin: 0 0 10px 0;
-    font-size: 28px;
-}
-
-.creator-card:nth-child(2) .profile-pic {
-    width: 110px;
-    height: 110px;
-}
-
-.creator-card:nth-child(2) li {
-    margin-bottom: 4px;
-    line-height: 1.35;
-}
-
 .creator-card h2 {
     font-family: 'HarryPotter';
     font-size: 32px;
@@ -255,7 +234,7 @@ footer {
 .creator-card p {
     font-size: 14px;
     line-height: 1.4;
-    margin: 2px 0;
+    margin: 2px 0; 
 }
 
 .creator-card ul {
